@@ -15,18 +15,18 @@ Install the required Python packages:
 
 ```bash
 pip install findspark pyspark pandas Pillow piexif boto3
-
+```
 # Usage
 
 Update the TSV/CSV file path in main.py:
 
 ```bash
 tsv_path = '/path/to/your/tsv_or_csv_file.csv'
-
+```
 Run the extraction script:
 ```bash
 python main.py
-
+```
 This script will extract metadata from the images and store the results in HDFS.
 
 # Project Structure

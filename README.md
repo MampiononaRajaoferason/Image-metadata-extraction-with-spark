@@ -35,7 +35,7 @@ main.py: The main script to run the metadata extraction and store the results in
 # HDFS Output
 Metadata for successful extractions is stored in the success_output folder in HDFS.
 Metadata for failed extractions (errors) is stored in the failure_output folder in HDFS.
-Additional Notes
+### Additional Notes
 Adjust the decoding method in metadata_extraction.py if the EXIF data contains other encodings.
 # Alternatives
 Instead of HDFS, consider storing the metadata in a relational database for easy querying.

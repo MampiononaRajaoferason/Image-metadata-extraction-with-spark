@@ -37,11 +37,11 @@ metadata_extraction.py: Contains the functions for extracting metadata.
 
 main.py: The main script to run the metadata extraction and store the results in HDFS.
 # HDFS Output
-Metadata for successful extractions is stored in the success_output folder in HDFS.
+Both the metadata for successful and failed (errors) extractions are stored in the success_output folder in HDFS.
 ![metadata_json](https://github.com/MampiononaRajaoferason/Image-metadata-extraction-with-spark/assets/38230401/f20f6c87-3ed3-4337-a77c-f8ba0b66138d)
 
 
-Metadata for failed extractions (errors) is stored in the failure_output folder in HDFS.
+
 ### Additional Notes
 Adjust the decoding method in metadata_extraction.py if the EXIF data contains other encodings.
 

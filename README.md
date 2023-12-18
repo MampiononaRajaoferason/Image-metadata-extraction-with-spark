@@ -34,15 +34,21 @@ This script will extract metadata from the images and store the results in HDFS.
 
 # Project Structure
 metadata_extraction.py: Contains the functions for extracting metadata.
+
 main.py: The main script to run the metadata extraction and store the results in HDFS.
 # HDFS Output
 Metadata for successful extractions is stored in the success_output folder in HDFS.
+
 Metadata for failed extractions (errors) is stored in the failure_output folder in HDFS.
 ### Additional Notes
 Adjust the decoding method in metadata_extraction.py if the EXIF data contains other encodings.
+
+json format was chosen due to the fact the EXIF data contains nested dictionaries, making querying and extracting useful information easier in this chosen format.
 # Alternatives
 Instead of HDFS, consider storing the metadata in a relational database for easy querying.
 Utilize cloud-based services like AWS Glue for scalable and serverless ETL jobs.
+
+
 # GPS Data Visualization
 The project includes a GPS data visualization component. The GPS data extracted from the images is converted into human-readable format and plotted on a map to visualize the distribution of image locations.
 

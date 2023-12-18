@@ -16,6 +16,9 @@ Install the required Python packages:
 ```bash
 pip install findspark pyspark pandas Pillow piexif boto3
 ```
+# Data source
+This project uses the open images dataset : https://www.kaggle.com/datasets/iamsouravbanerjee/indian-food-images-dataset/
+
 # Usage
 
 Update the TSV/CSV file path in main.py:

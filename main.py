@@ -10,6 +10,8 @@ import pandas as pd
 
 #from pyspark import SparkContext, SparkConf
 from pyspark.sql import SparkSession
+from pyspark.sql.types import StructType, StructField, StringType, ArrayType, IntegerType, MapType
+from pyspark.sql.functions import col
 
 from metadata_extraction import extract_metadata, write_metadata_success_to_json
 #from gps_extraction import extract_gps_data
@@ -34,13 +36,8 @@ if __name__ =="__main__":
     
     
     # Writing the outputs to HDFS
-    output_path_specific = '/gps_data_extraction_success'
-    write_metadata(spark,metadata_success_list, output_path_specific, use_specific_schema=True)
-    
-    # Example usage with default schema
     output_path = '/'
     write_metadata_success_to_json(metadata_success_list, output_path)
-    
     
     # read from hdfs
     ## Define the schema based on the JSON structure

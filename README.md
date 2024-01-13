@@ -47,7 +47,7 @@ spark-submit \
   --executor-cores 2 \
   --executor-memory 4G \
   --conf spark.executor.memoryOverhead=1G \
-  your_python_script.py
+  main.py
 ```
 
 

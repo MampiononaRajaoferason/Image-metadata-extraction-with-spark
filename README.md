@@ -36,6 +36,21 @@ This script will extract metadata from the images and store the results in HDFS.
 metadata_extraction.py: Contains the functions for extracting metadata.
 
 main.py: The main script to run the metadata extraction and store the results in HDFS.
+# Submitting the job 
+```bash
+
+spark-submit \
+  --py-files main.py \
+  --master yarn \
+  --deploy-mode cluster \
+  --num-executors 5 \
+  --executor-cores 2 \
+  --executor-memory 4G \
+  --conf spark.executor.memoryOverhead=1G \
+  your_python_script.py
+```
+
+
 # HDFS Output
 Both the metadata for successful and failed (errors) extractions are stored in the success_output folder in HDFS.
 ![metadata_json](https://github.com/MampiononaRajaoferason/Image-metadata-extraction-with-spark/assets/38230401/f20f6c87-3ed3-4337-a77c-f8ba0b66138d)
